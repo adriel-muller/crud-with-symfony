@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Aluno index
+{% endblock %}
+
+{% block body %}
+	<div class="customCard">
+
+
+		<div class="title">
+			<h1>Banco de Alunos
+			</h1>
+			<h6>Com CRUD completo</h6>
+		</div>
+		<div class="button">
+			<a class="btn btn-info btn-sm" href="{{ path('aluno_new') }}">Add
+				<img src="../images/create.svg"></a>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+					<th>Email</th>
+					<th>Idade</th>
+					<th>actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for aluno in alunos %}
+					<tr>
+						<td>{{ aluno.id }}</td>
+						<td>{{ aluno.nome }}</td>
+						<td>{{ aluno.email }}</td>
+						<td>{{ aluno.idade }}</td>
+						<td>
+							<a href="{{ path('aluno_show', {'id': aluno.id}) }}"><img src="../images/show.svg"></a>
+							<a href="{{ path('aluno_edit', {'id': aluno.id}) }}"><img src="../images/edit.svg"></a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="5">no records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+
+	</div>
+{% endblock %}

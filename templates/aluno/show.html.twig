@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Aluno
+{% endblock %}
+
+{% block body %}
+	<div class="customCard">
+		<h1>{{ aluno.nome }}</h1>
+
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>Id</th>
+					<td>{{ aluno.id }}</td>
+				</tr>
+				<tr>
+					<th>Nome</th>
+					<td>{{ aluno.nome }}</td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td>{{ aluno.email }}</td>
+				</tr>
+				<tr>
+					<th>Idade</th>
+					<td>{{ aluno.idade }}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="customForm2">
+			<a href="{{ path('aluno_edit', {'id': aluno.id}) }}"><img src="../images/edit.svg"></a>
+		</div>
+		{{ include('aluno/_delete_form.html.twig') }}
+		<div class="right">
+			<a href="{{ path('aluno_index') }}"><img src="../images/return.svg"></a>
+		</div>
+	</div>
+
+
+{% endblock %}

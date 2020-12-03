@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Info Page!
+{% endblock %}
+
+{% block body %}
+
+	<div class="customCard">
+
+		<div class="bigColumns">
+
+
+			<h2>Vantagens dos Symfony</h2>
+			<ul>
+				<li>Orientado a objetos;</li>
+				<li>Possui ferramentas de depuração;</li>
+				<li>Suporte para ambientes de implantação;</li>
+				<li>Recursos avançados de segurança;</li>
+				<li>Documentação completa e bem explicada;</li>
+				<li>ORM: Fácil integração com Doctrine;</li>
+				<li>Integração com PHPUnit;</li>
+				<li>Versões mantidas por um longo período.</li>
+			</ul>
+		</div>
+
+
+		<div>
+			<div class="bigColumns">
+
+				<h5 class="justify">Utiliza o padrão de projeto MVC, que é basicamente:</h5>
+				<ul>
+					<li>Model: Parte lógica da aplicação que gerencia o comportamento dos dados. A camada de model apenas tem o necessário para que tudo aconteça, mas não sabe quando irá executar.</li>
+
+					<li>View: Gerencia a saída gráfica e textual da aplicação ao usuário final, não possuindo a responsabilidade de saber quando vai exibir os dados, apenas como irá exibi-los.</li>
+
+					<li>Controller: Essa é a camada que sabe quem chamar e quando chamar para executar determinada ação, comandando a visão e o modelo para se alterarem de forma apropriada.</li>
+				</ul>
+			</div>
+
+
+			<div class="bigColumns">
+				<h5 class="justify">Ferramenta Flex:</h5>
+				<p class="justify">A partir da versão 4 o Symfony possui uma ferramenta chamada Flex. Ela realiza a instalação e configuração de pacotes de uma maneira extremamente simples e automática. Isso permite ao desenvolvedor iniciar um projeto com o mínimo de dependências e “plugar” novas funcionalidades quando necessário. Baseado nesse recurso quando vamos instalar o Symfony podemos escolher entre uma aplicação mínima com características de micro-framework ou uma aplicação completa, com características de framework.</p>
+			</div>
+
+
+			<div class="bigColumns">
+				<h5 class="justify">Atualizações e Suporte:</h5>
+				<p class="justify">O Symfony possui cronogramas muito bem definido de manutenção de correções e suporte para cada uma das versões lançadas. Isso garante uma segurança maior, principalmente para projetos corporativos.
+																									
+																									            As versões comuns contam com 6 meses de suporte a correções e 1 ano de suporte de segurança, enquanto as versões LTS (long term support) 3 anos de suporte para correção e 4 anos de suporte para segurança, sendo a segunda a versão mais indicada para uso em produção.</p>
+			</div>
+
+			<div class="bigColumns">
+				<h5 class="justify">Conclusão:</h5>
+				<p class="justify">O Symfony é um ótimo framework para a criação de aplicações, independente do seu tamanho. Aqui vimos algumas de suas principais características.</p>
+			</div>
+
+		</div>
+
+	</div>
+{% endblock %}

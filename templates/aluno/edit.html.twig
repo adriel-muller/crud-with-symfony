@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Aluno
+{% endblock %}
+
+{% block body %}
+	<div class="customCard">
+		<h1>Editar Cadastro do Aluno</h1>
+		<div class="formCard">
+			{{ include('aluno/_form.html.twig') }}
+		</div>
+
+		{{ include('aluno/_delete_form.html.twig') }}
+
+		<div class="right">
+			<a href="{{ path('aluno_index') }}"><img src="../../images/return.svg"></a>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Aluno
+{% endblock %}
+
+{% block body %}
+	<div class="customCard">
+		<h1>Cadastrar Aluno</h1>
+		<div class="formCard">
+			{{ include('aluno/_form.html.twig') }}
+		</div>
+		<div class="right">
+			<a href="{{ path('aluno_index') }}"><img src="../images/return.svg"></a>
+		</div>
+	</div>
+{% endblock %}
